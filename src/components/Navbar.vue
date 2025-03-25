@@ -1,5 +1,5 @@
 <template>
-  <nav class="bg-gray-300 shadow-md dark:bg-gray-900">
+  <nav class="bg-gray-300 shadow-md dark:bg-gray-900 fixed top-0 w-full z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-16">
         <!-- Logo -->
@@ -26,6 +26,8 @@
       <router-link to="/about" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">About</router-link>
     </div>
   </nav>
+  <!-- Ensure content does not hide behind navbar -->
+  <div class="pt-16"></div>
 </template>
 
 <script setup>
@@ -33,4 +35,3 @@ import { ref } from "vue";
 
 const isOpen = ref(false);
 </script>
-
